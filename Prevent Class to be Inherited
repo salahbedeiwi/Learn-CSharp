@@ -1,0 +1,26 @@
+//Example 1
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PreventInheritanceInClass
+{
+    //how to prevent any class to be inherited - use sealed classes.
+    class school { }//i can inherit these
+    class room : school { }//i can inherit these
+    sealed class table: room { } //i can't inherit these
+    sealed class chair :room { }//i can't inherit these
+    class board : room { }//i can inherit these
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}
+
+
