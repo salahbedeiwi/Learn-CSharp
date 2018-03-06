@@ -1,0 +1,40 @@
+
+//Example 2
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PreventInheritanceInClass
+{
+    //accessibility: if you have a private class, then you inherit from
+    //it, and make the inherited class as public ----- error
+    //parent must be higher accessibility:
+    //public, private, protected
+    //how to prevent any class to be inherited - use sealed classes.
+    public class school { }//i can inherit these
+    public class room : school { }//i can inherit these
+    public sealed class table: room { } //i can't inherit these
+    sealed class chair :room { }//i can't inherit these
+    class board : room { }//i can inherit these
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+        }
+    }
+}
+/*
+
+Make sure when you inherit from a class, your new class must have less or equal to accessibility than the base class.
+
+If you have a private base class, and you like to have a public class to inherit from the base class.......wrong
+private base class -> private subclass ........ true
+public base class -> private/public subclass ...... true
+
+
+*/
