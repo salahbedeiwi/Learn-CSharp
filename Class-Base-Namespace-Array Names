@@ -77,6 +77,12 @@ namespace Class_NameSpaceNBase_Names
             Print(p.GetType().IsPublic);//is my class public => True, Public class Person {...}
             Print(p.GetType().GetFields());//return all public fields => System.Reflection.FieldInfo[]
             Print(p.GetType().GetFields()[0]);//first field => System.String name (wooooow)
+            //print all fields inside p
+            object[] fieldsInClass = p.GetType().GetFields();
+            foreach(object o in fieldsInClass)
+            {
+                Print(o);
+            }
             Print(p.GetType().Namespace);//Namespace => Class_NameSpaceNBase_Names
             Print(p.GetHashCode());//HashCode = > 22008501
             Print(p.ToString()); // Class_NameSpaceNBase_Names.Person
@@ -128,3 +134,60 @@ namespace Class_NameSpaceNBase_Names
         }
     }
 }
+/* Results:
+My Class name is => Person
+=========================================
+=========================================
+Main Days Class
+=========================================
+Class_NameSpaceNBase_Names.Days
+Class_NameSpaceNBase_Names.Days
+=========================================
+Void Welcome()
+
+=========================================
+Person
+2d2b06e4-953d-311a-8cde-51e7ca7fc0bc
+False
+Class_NameSpaceNBase_Names.Person
+True
+System.Reflection.FieldInfo[]
+System.String name
+System.String name
+System.String name_2
+System.String name_3
+Class_NameSpaceNBase_Names
+45653674
+Class_NameSpaceNBase_Names.Person
+Class_NameSpaceNBase_Names.Person
+True
+==============================================================
+True
+3
+Bedeiwi
+System.Object[]
+True
+1
+Object[]
+System.Object[]
+==============================================================
+System.IO.StreamWriter
+StreamWriter
+System.IO
+==============================================================
+Class_NameSpaceNBase_Names.Employee
+Employee
+Class_NameSpaceNBase_Names.Employee
+Class_NameSpaceNBase_Names.Person
+Main Days Class
+System.Object
+False
+True
+==============================================================
+My Class name is => Financial
+
+
+
+
+
+*/
