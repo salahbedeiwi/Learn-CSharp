@@ -76,6 +76,7 @@ namespace Class_NameSpaceNBase_Names
             Print(p.GetType().FullName);//Full name but no assembly => Class_NameSpaceNBase_Names.Person
             Print(p.GetType().IsPublic);//is my class public => True, Public class Person {...}
             Print(p.GetType().GetFields());//return all public fields => System.Reflection.FieldInfo[]
+            Print(p.GetType().GetFields()[0]);//first field => System.String name (wooooow)
             Print(p.GetType().Namespace);//Namespace => Class_NameSpaceNBase_Names
             Print(p.GetHashCode());//HashCode = > 22008501
             Print(p.ToString()); // Class_NameSpaceNBase_Names.Person
