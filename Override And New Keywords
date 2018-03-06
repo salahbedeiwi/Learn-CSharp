@@ -170,7 +170,7 @@ namespace OverrideUsingNewKeyWord
             // which one is stronger new or override
             p4.PrintId();  //override -Engineer Class or Person Class => Engineer Class stronger
             p5.PrintId(); // new - Manager class or Person class => Person Class
-            p4.
+    
 
             nl();
 
